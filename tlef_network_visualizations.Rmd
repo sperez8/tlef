@@ -1,0 +1,222 @@
+---
+title: "TLEF Network Visualizations"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: "sandstone"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE}
+library(tidyverse)
+library(tidygraph)
+library(visNetwork)
+library(stringr)
+source("networks.R")
+```
+
+```{r, include=FALSE}
+all_tidy <- read_csv("../results/all_tidy.csv")
+```
+
+## All years
+
+### All projects
+
+* Only showing collaborators who are linked to 6 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  threshold = 6
+)
+```
+
+### Large projects
+
+* Only showing collaborators who are linked to 3 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_size_of_interest = "large",
+  threshold = 3
+)
+```
+
+### Small projects
+
+* Only showing collaborators who are linked to 4 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_size_of_interest = "small",
+  threshold = 4
+)
+```
+
+## 2018
+
+### All projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2018
+)
+```
+
+### Large projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2018,
+  project_size_of_interest = "large"
+)
+```
+
+### Small projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2018,
+  project_size_of_interest = "small"
+)
+```
+
+## 2017
+
+### All projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2017
+)
+```
+
+### Large projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2017,
+  project_size_of_interest = "large"
+)
+```
+
+### Small projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2017,
+  project_size_of_interest = "small"
+)
+```
+
+## 2016
+
+### All projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2016
+)
+```
+
+### Large projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2016,
+  project_size_of_interest = "large"
+)
+```
+
+### Small projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2016,
+  project_size_of_interest = "small"
+)
+```
+
+## 2015
+
+### All projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2015
+)
+```
+
+### Large projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2015,
+  project_size_of_interest = "large"
+)
+```
+
+### Small projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2015,
+  project_size_of_interest = "small"
+)
+```
+
+## 2014
+
+### All projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_year_of_interest = 2014
+)
+```
