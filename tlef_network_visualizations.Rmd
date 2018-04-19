@@ -20,7 +20,7 @@ source("networks.R")
 ```
 
 ```{r, include=FALSE}
-all_tidy <- read_csv("../results/all_tidy.csv")
+all_tidy <- read_csv("results/all_tidy.csv")
 ```
 
 ## All years

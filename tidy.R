@@ -24,14 +24,14 @@ tidy_data <- function() {
     rbind(fl_2014_tidy) %>% 
     rbind(fl_2013_tidy)
   project_summary_table <- make_project_summary_table(all_tidy = all_tidy)
-  write_csv(all_tidy, "../results/all_tidy.csv")
-  write_csv(project_summary_table, "../results/project_summary_table.csv")
+  write_csv(all_tidy, "results/all_tidy.csv")
+  write_csv(project_summary_table, "results/project_summary_table.csv")
 }
 
 load_data <- function(sheet) {
   if (sheet == "lp_2018") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2018 LP",
       skip = 1,
       n_max = 9
@@ -40,7 +40,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "sp_2018") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2018 SP",
       skip = 1,
       n_max = 54
@@ -49,7 +49,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "lp_2017") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2017 LP",
       skip = 1,
       n_max = 15
@@ -58,7 +58,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "sp_2017") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2017 SP",
       skip = 1,
       n_max = 49
@@ -67,7 +67,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "lp_2016") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2016 LP",
       skip = 1,
       n_max = 16
@@ -76,7 +76,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "sp_2016") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2016 SP",
       skip = 1,
       n_max = 45
@@ -85,7 +85,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "lp_2015") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2015 LP",
       skip = 1,
       n_max = 20
@@ -94,7 +94,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "sp_2015") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2015 SP ",
       skip = 1,
       n_max = 40
@@ -103,7 +103,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "fl_2014") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2014 FL",
       skip = 1,
       n_max = 18
@@ -112,7 +112,7 @@ load_data <- function(sheet) {
       select(project_title = 1, everything())
   } else if (sheet == "fl_2013") {
     data <- read_xlsx(
-      path = "../data/faculty_engagement_2013-2018_feb19.xlsx", 
+      path = "data/faculty_engagement_2013-2018_feb19.xlsx", 
       sheet = "2013 FL ",
       skip = 1,
       n_max = 35
