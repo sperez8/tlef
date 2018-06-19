@@ -25,7 +25,7 @@ all_tidy <- read_csv("results/all_tidy.csv")
 
 ## All years
 
-### All projects
+### All projects, 6+
 
 * Only showing collaborators who are linked to 6 projects or more
 
@@ -36,27 +36,49 @@ prepare_network_viz(
 )
 ```
 
-### Large projects
+### All projects, 5+
 
-* Only showing collaborators who are linked to 3 projects or more
+* Only showing collaborators who are linked to 5 projects or more
 
 ```{r, echo = FALSE}
 prepare_network_viz(
   raw_df = all_tidy,
-  project_size_of_interest = "large",
-  threshold = 3
+  threshold = 5
 )
 ```
 
-### Small projects
+### All projects, 4+
 
 * Only showing collaborators who are linked to 4 projects or more
 
 ```{r, echo = FALSE}
 prepare_network_viz(
   raw_df = all_tidy,
-  project_size_of_interest = "small",
   threshold = 4
+)
+```
+
+### Large projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_size_of_interest = "large",
+  threshold = 2
+)
+```
+
+### Small projects
+
+* Only showing collaborators who are linked to 2 projects or more
+
+```{r, echo = FALSE}
+prepare_network_viz(
+  raw_df = all_tidy,
+  project_size_of_interest = "small",
+  threshold = 2
 )
 ```
 
